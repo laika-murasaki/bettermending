@@ -42,12 +42,10 @@ public final class Bettermending extends JavaPlugin implements Listener {
                     newXp -= player.getExpToLevel();
                     newLevel++;
                 }
-                int totalXP = player.getTotalExperience();
-                int level = player.getLevel();
-                float progressToNextLevel = (float) totalXP / (float) player.getExpToLevel();
-                player.setExp(progressToNextLevel / player.getExpToLevel());
-
+                float newProgress = (float) newXp / (float) player.getExpToLevel();
+                player.setExp(newProgress);
                 player.setLevel(newLevel);
+
 
                 // Send a message to the player
                 player.sendMessage(ChatColor.GREEN + "Repaired item for " + (itemDurability - newDurability) + " durability using " + xpCost + " experience points.");

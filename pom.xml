@@ -6,7 +6,7 @@
 
     <groupId>bettermending</groupId>
     <artifactId>bettermending</artifactId>
-    <version>8.4-1.19.3-paper</version>
+    <version>8.6-1.19.3-paper</version>
     <packaging>jar</packaging>
 
     <name>Bettermending</name>
