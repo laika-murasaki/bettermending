@@ -35,7 +35,7 @@ public final class Bettermending extends JavaPlugin implements Listener {
 
                 // Repair the item and remove the necessary amount of xp
                 item.setDurability((short) newDurability);
-                int xpCost = (itemDurability - newDurability) / 2;
+                int xpCost = Math.round((float) (itemDurability - newDurability) / 2);
                 int newXp = Math.max(0, xp - xpCost);
                 int newLevel = 0;
                 while (newLevel < player.getLevel() && newXp >= player.getExpToLevel()) {
