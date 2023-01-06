@@ -1,0 +1,6 @@
+name: Bettermending
+version: '${project.version}'
+main: bettermending.bettermending.Bettermending
+api-version: 1.19
+authors: [ Laika ]
+website: https://hynse.xyz
