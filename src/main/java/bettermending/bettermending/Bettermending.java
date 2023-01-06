@@ -45,8 +45,7 @@ public final class Bettermending extends JavaPlugin implements Listener {
                 int totalXP = player.getTotalExperience();
                 int level = player.getLevel();
                 float progressToNextLevel = (float) totalXP / (float) player.getExpToLevel();
-                player.setExp(progressToNextLevel - (float) 2.5);
-
+                player.setExp(progressToNextLevel / player.getExpToLevel());
 
                 player.setLevel(newLevel);
 
