@@ -42,7 +42,9 @@ public final class Bettermending extends JavaPlugin implements Listener {
                     newXp -= player.getExpToLevel();
                     newLevel++;
                 }
-                player.setExp(newXp / player.getExpToLevel());
+                float progress = (float) newXp / player.getExpToLevel();
+                player.setExp(progress);
+
                 player.setLevel(newLevel);
 
                 // Send a message to the player
