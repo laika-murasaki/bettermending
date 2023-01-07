@@ -1,9 +1,2 @@
-#Exp point to use per repair amount
-xpCost: 1
-
-#how much to repair
-repairAmount: 2
-
-allowedEnchantments:
-  - MENDING
-  - UNBREAKING
+xpCost: 20 # The amount of experience points required to repair 1 durability point
+repairAmount: 1 # The amount of durability points repaired per use
