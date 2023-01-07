@@ -23,7 +23,10 @@ repairAmount: 1 # The amount of durability points repaired per use
 ### Permissions
 bettermending.use: Allow a player to use the repair feature
 
-MIT License
+
+
+
+# MIT License
 
 Copyright (c) 2023 Hynse Bettermending
 
