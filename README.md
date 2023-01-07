@@ -9,6 +9,7 @@ A plugin that allows players to repair their items with experience points or a s
 - Specify a permission required to use the repair feature
 - Repair items with the right click mouse button while holding shift
 
+![BetterMending gif](https://hynse.xyz/downloadable/bettermending.gif)
 
 
 ### Configuration
