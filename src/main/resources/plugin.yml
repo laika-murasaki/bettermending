@@ -1,10 +1,24 @@
 name: Bettermending
-version: '${project.version}'
+version: '1.0.4-1.19.3-paper'
 main: bettermending.bettermending.bettermending
 api-version: 1.19
 authors: [ Laika ]
 website: https://hynse.xyz
+commands:
+  bm:
+    description: BetterMending command
+    usage: '/bm <command>'
+    aliases: [bm, bettermending]
+    subcommands:
+      status:
+        description: Check the repair status of an item
+        usage: '/bm status'
+      reload:
+        description: Reload the plugin's configuration
+        usage: '/bm reload'
+        permission: bettermending.reload
 permissions:
-  bettermending.use:
+  betterment.use:
     description: Allows a player to use the repair feature
     default: true
+    permission: betterment.use

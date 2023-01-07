@@ -26,8 +26,8 @@ mendingNotAllowed: "The MENDING enchantment is not allowed on this server."
 # Message displayed when the player does not have enough XP to repair their item
 insufficientXP: "You do not have enough XP to repair your item."
 
-# Message displayed when showing the player how much durability is left until their item is fully repaired
-durabilityLeftMessage: "Your item has %d durability left until it is fully repaired."
+# The message displayed when the player's item is not repairable
+notRepairableMessage: "Your item is not repairable."
 
-# Message displayed when showing the player how many repairs are needed and how much XP it will cost to fully repair their item
-repairsNeededMessage: "It will take %d repair(s) to fully repair your item, costing a total of %d exp points."
+# The message displayed when showing the player how much durability is left until their item is fully repaired
+durabilityLeftMessage: "Your item has %d durability left until it is fully repaired."
