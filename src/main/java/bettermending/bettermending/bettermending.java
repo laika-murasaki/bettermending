@@ -10,6 +10,8 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bstats.bukkit.Metrics;
+
 
     public class bettermending extends JavaPlugin implements Listener {
         public void RepairPlugin() {
@@ -24,6 +26,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
         // Print message to console when plugin is enabled
         getLogger().info("BetterMending has been enabled!");
+        // Initialize bStats metrics
+        int pluginId = 17330; // Replace with your plugin id
+        Metrics metrics = new Metrics(this, pluginId);
     }
 
     @Override
