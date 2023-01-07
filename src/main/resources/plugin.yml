@@ -1,6 +1,10 @@
 name: Bettermending
 version: '${project.version}'
-main: bettermending.bettermending.Bettermending
+main: bettermending.bettermending.bettermending
 api-version: 1.19
 authors: [ Laika ]
 website: https://hynse.xyz
+permissions:
+  bettermending.use:
+    description: Allows a player to use the repair feature
+    default: true

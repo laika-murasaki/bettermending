@@ -1,0 +1,9 @@
+#Exp point to use per repair amount
+xpCost: 1
+
+#how much to repair
+repairAmount: 2
+
+allowedEnchantments:
+  - MENDING
+  - UNBREAKING
