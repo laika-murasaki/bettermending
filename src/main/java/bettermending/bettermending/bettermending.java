@@ -14,6 +14,7 @@ import org.bstats.bukkit.Metrics;
 import javax.annotation.Nonnull;
 
 import java.util.List;
+import java.util.Map;
 
 public class bettermending extends JavaPlugin implements Listener {
     @Override
@@ -52,16 +53,31 @@ public class bettermending extends JavaPlugin implements Listener {
             return;
         }
 
-        // Check if the MENDING enchantment is in the list of allowed enchantments
-        List <String> allowedEnchantments = getConfig().getStringList("allowedEnchantments");
-        if (!allowedEnchantments.contains(Enchantment.MENDING.getName())) {
-            return;
+        // Initialize the interactEvent variable
+        PlayerInteractEvent interactEvent = event;
+
+        // Get the item being enchanted
+        ItemStack enchantedItem = event.getItem();
+
+        // Get the map of enchantments applied to the item
+        Map<Enchantment, Integer> enchantments = item.getEnchantments();
+
+        // Iterate through the map of enchantments and check if any of them are not allowed
+        List<String> allowedEnchantments = getConfig().getStringList("allowedEnchantments");
+        for (Enchantment enchant : enchantments.keySet()) {
+            if (!allowedEnchantments.contains(enchant.getName())) {
+                // Enchantment is not allowed, cancel the event
+                interactEvent.setCancelled(true);
+                return;
+            }
         }
+
+        // All enchantments are allowed, proceed with the interaction
+
         int xpCost = getConfig().getInt("xpCost");
         int repairAmount = getConfig().getInt("repairAmount");
 
         int playerExperience = ExperienceUtil.getPlayerExp(player); // pass player object as argument
-
 
         if (item.getDurability() == 0) {
             // Item is already fully repaired, do nothing
