@@ -49,10 +49,6 @@ public class bettermending extends JavaPlugin implements Listener {
         ItemStack item = player.getInventory().getItemInMainHand();
 
         // Check if the item has the MENDING enchantment
-        if (!item.getEnchantments().containsKey(Enchantment.MENDING)) {
-            return;
-        }
-
         // Initialize the interactEvent variable
         PlayerInteractEvent interactEvent = event;
 
