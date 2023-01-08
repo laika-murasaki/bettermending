@@ -48,24 +48,32 @@ public class bettermending extends JavaPlugin implements Listener {
 
         ItemStack item = player.getInventory().getItemInMainHand();
 
-        // Check if the item has the MENDING enchantment
-        // Initialize the interactEvent variable
         PlayerInteractEvent interactEvent = event;
 
-        // Get the item being enchanted
-        ItemStack enchantedItem = event.getItem();
 
         // Get the map of enchantments applied to the item
         Map<Enchantment, Integer> enchantments = item.getEnchantments();
 
         // Iterate through the map of enchantments and check if any of them are not allowed
+        if (enchantments.isEmpty()) {
+            // Item has no enchantments, cancel the event
+            interactEvent.setCancelled(true);
+            return;
+        }
+
         List<String> allowedEnchantments = getConfig().getStringList("allowedEnchantments");
+        boolean hasAllowedEnchantment = false;
         for (Enchantment enchant : enchantments.keySet()) {
-            if (!allowedEnchantments.contains(enchant.getName())) {
-                // Enchantment is not allowed, cancel the event
-                interactEvent.setCancelled(true);
-                return;
+            if (allowedEnchantments.contains(enchant.getName())) {
+                hasAllowedEnchantment = true;
+                break;
             }
+        }
+
+        if (!hasAllowedEnchantment) {
+            // Item does not have any allowed enchantments, cancel the event
+            interactEvent.setCancelled(true);
+            return;
         }
 
         // All enchantments are allowed, proceed with the interaction
