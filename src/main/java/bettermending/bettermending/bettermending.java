@@ -62,7 +62,7 @@ public class bettermending extends JavaPlugin implements Listener {
             // Item has no enchantments, cancel the event
             interactEvent.setCancelled(true);
             return;
-        } else if allowedEnchantments.contains("any") {
+        } else if (allowedEnchantments.contains("any")  ) {
             // Any enchantment is allowed
             hasAllowedEnchantment = true;
         }
