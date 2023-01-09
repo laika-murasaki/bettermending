@@ -53,16 +53,20 @@ public class bettermending extends JavaPlugin implements Listener {
 
         // Get the map of enchantments applied to the item
         Map<Enchantment, Integer> enchantments = item.getEnchantments();
+        
+        List<String> allowedEnchantments = getConfig().getStringList("allowedEnchantments");
+        boolean hasAllowedEnchantment = false;
 
         // Iterate through the map of enchantments and check if any of them are not allowed
         if (enchantments.isEmpty()) {
             // Item has no enchantments, cancel the event
             interactEvent.setCancelled(true);
             return;
+        } else if allowedEnchantments.contains("any") {
+            // Any enchantment is allowed
+            hasAllowedEnchantment = true;
         }
 
-        List<String> allowedEnchantments = getConfig().getStringList("allowedEnchantments");
-        boolean hasAllowedEnchantment = false;
         for (Enchantment enchant : enchantments.keySet()) {
             if (allowedEnchantments.contains(enchant.getName())) {
                 hasAllowedEnchantment = true;
