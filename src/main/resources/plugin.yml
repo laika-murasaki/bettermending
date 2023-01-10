@@ -16,7 +16,7 @@ commands:
       reload:
         description: Reload the plugin's configuration
         usage: '/bm reload'
-        permission: bettermending.reload
+        permission: betterment.reload
 permissions:
   betterment.use:
     description: Allows a player to use the repair feature
