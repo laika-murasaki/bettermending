@@ -1,5 +1,5 @@
 name: Bettermending
-version: '1.0.7-1.19.3-paper'
+version: '1.0.8a-1.19.3-paper'
 main: bettermending.bettermending.Bettermending
 api-version: 1.19
 authors: [ Laika ]
