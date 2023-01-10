@@ -29,7 +29,7 @@
                     <relocations>
                         <relocation>
                             <pattern>org.bstats</pattern>
-                            <shadedPattern>bettermending.bettermending.bettermending</shadedPattern>
+                            <shadedPattern>bettermending.bettermending.Bettermending</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>

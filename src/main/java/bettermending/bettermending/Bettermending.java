@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Map;
 
-public class bettermending extends JavaPlugin implements Listener {
+public class Bettermending extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         PluginCommand command = getCommand("bm");
