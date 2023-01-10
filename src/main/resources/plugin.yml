@@ -1,6 +1,6 @@
 name: Bettermending
 version: '1.0.7-1.19.3-paper'
-main: bettermending.bettermending.bettermending
+main: bettermending.bettermending.Bettermending
 api-version: 1.19
 authors: [ Laika ]
 website: https://hynse.xyz
