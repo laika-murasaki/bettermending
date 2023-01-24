@@ -1,3 +1,5 @@
+# ⚠ IF USING IN SERVER, PLEASE PROVIDE CREDIT TO THE ORIGINAL SOURCE.
+
 # BetterMending [![Maven Package](https://github.com/laika-murasaki/bettermending/actions/workflows/maven-publish.yml/badge.svg?branch=master)](https://github.com/laika-murasaki/bettermending/actions/workflows/maven-publish.yml)
 A plugin that allows players to repair their items with experience points or a specified item, with customizable repair amounts and costs.
 
